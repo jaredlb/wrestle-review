@@ -23,8 +23,8 @@ Route::middleware('auth')->group(function () {
 
 
 Route::get('/blogs', [ BlogIndexController::class, 'index' ])->name('blogs.index');
-Route::get('/blogs/{blog?}', [ BlogFormController::class, 'form' ])->name('blogs.form');
-Route::post('/blogs/{blog?}', [ BlogUpdateController::class, 'update' ])->name('blogs.update');
+Route::get('/blogs/edit/{blog?}', [ BlogFormController::class, 'form' ])->middleware('web')->name('blogs.form');
+Route::post('/blogs/edit/{blog?}', [ BlogUpdateController::class, 'update' ])->middleware('web')->name('blogs.update');
 Route::get('/blogs/read/{blog}', [ BlogReadController::class, 'read' ])->name('blogs.read');
 
 require __DIR__.'/auth.php';

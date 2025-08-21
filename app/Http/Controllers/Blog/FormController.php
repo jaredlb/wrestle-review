@@ -9,7 +9,7 @@ class FormController extends Controller
 {
     public function form(?Blog $blog)
     {
-        return view('blog.form', [
+        return view('pages.blogs.form', [
             'blog' => $blog
         ]);
     }

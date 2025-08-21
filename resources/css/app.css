@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-crimson {
+    background: #A4193D;
+}
+
+.border-crimson:focus {
+    border-color: #A4193D;
+}
+
+.ring-crimson:focus {
+    --tw-ring-color: #A4193D;
+}
