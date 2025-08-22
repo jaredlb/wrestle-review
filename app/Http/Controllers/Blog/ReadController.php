@@ -11,7 +11,7 @@ class ReadController extends Controller
 {
     public function read(Blog $blog)
     {
-        return view('blogs.read', [
+        return view('pages.blogs.read', [
             'blog' => $blog
         ]);
     }

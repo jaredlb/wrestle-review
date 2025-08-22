@@ -23,7 +23,7 @@ class UpdateController extends Controller
 
         $blog->fill($request->all());
         if (!$blog->exists) {
-            $blog->user_id = Auth::id();
+            $blog->user_id = Auth::id() ?? 1;
         }
 
         $blog->save();
